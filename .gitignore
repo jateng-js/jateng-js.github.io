@@ -1,5 +1,7 @@
 node_modules/
 dist/
 .astro/
+.vitepress/cache/
+.vitepress/dist/
 
 .DS_Store

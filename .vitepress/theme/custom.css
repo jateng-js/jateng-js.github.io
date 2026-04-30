@@ -1,0 +1,138 @@
+:root {
+  --vp-c-brand-1: #f7df1e;
+  --vp-c-brand-2: #ffd43b;
+  --vp-c-brand-3: #c7a900;
+  --vp-c-brand-soft: rgba(247, 223, 30, 0.16);
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #f7df1e 24%, #41d1ff 46%, #bd34fe 72%);
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #f7df1e 40%, #41d1ff 50%);
+  --vp-home-hero-image-filter: blur(72px);
+  --vp-c-bg: #101014;
+  --vp-c-bg-alt: #16161d;
+  --vp-c-bg-soft: #1f1f2a;
+  --vp-c-bg-elv: #20202a;
+  --vp-c-text-1: rgba(255, 255, 245, 0.96);
+  --vp-c-text-2: rgba(235, 235, 245, 0.68);
+  --vp-c-text-3: rgba(235, 235, 245, 0.46);
+  --vp-c-divider: rgba(84, 84, 88, 0.48);
+  --vp-c-gutter: rgba(84, 84, 88, 0.24);
+}
+
+.dark {
+  --vp-c-bg: #101014;
+  --vp-c-bg-alt: #16161d;
+  --vp-c-bg-soft: #1f1f2a;
+  --vp-c-bg-elv: #20202a;
+}
+
+.VPNavBarTitle .title,
+.VPHomeHero .name,
+.VPHomeHero .text,
+.VPFeature .title,
+.community-section h2 {
+  font-family: "VT323", ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.VPNavBarTitle .title {
+  font-size: 28px;
+}
+
+.VPHomeHero .name {
+  max-width: 12ch;
+  font-size: clamp(72px, 14vw, 168px);
+  line-height: 0.78;
+}
+
+.VPHomeHero .text {
+  max-width: 760px;
+  font-size: clamp(42px, 6vw, 78px);
+  line-height: 0.9;
+}
+
+.VPHomeHero .tagline {
+  max-width: 720px;
+  font-size: 20px;
+  line-height: 1.65;
+}
+
+.VPHomeHero .image-src {
+  width: min(320px, 56vw);
+  max-height: none;
+}
+
+.VPButton.brand {
+  color: #171717;
+}
+
+.VPFeature {
+  border: 1px solid rgba(255, 255, 245, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 245, 0.06), rgba(255, 255, 245, 0.03));
+}
+
+.VPFeature .title {
+  font-size: 34px;
+}
+
+.community-section {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 72px 24px 0;
+}
+
+.community-section h2 {
+  max-width: 780px;
+  margin: 0 0 20px;
+  font-size: clamp(44px, 7vw, 84px);
+  line-height: 0.9;
+}
+
+.community-section p {
+  max-width: 760px;
+  color: var(--vp-c-text-2);
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.section-kicker {
+  margin: 0 0 12px;
+  color: var(--vp-c-brand-1) !important;
+  font-size: 13px !important;
+  font-weight: 700;
+  line-height: 1.4 !important;
+  text-transform: uppercase;
+}
+
+.city-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 780px;
+}
+
+.city-list span {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  padding: 0 16px;
+  border: 1px solid rgba(255, 255, 245, 0.12);
+  border-radius: 999px;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  font-weight: 700;
+}
+
+.community-section--join {
+  padding-bottom: 96px;
+}
+
+@media (max-width: 640px) {
+  .VPHomeHero .name {
+    font-size: clamp(64px, 24vw, 112px);
+  }
+
+  .VPHomeHero .text {
+    font-size: clamp(38px, 13vw, 64px);
+  }
+}

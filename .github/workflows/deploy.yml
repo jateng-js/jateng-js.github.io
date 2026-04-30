@@ -37,12 +37,12 @@ jobs:
         run: bun run build
 
       - name: Add GitHub Pages marker
-        run: touch dist/.nojekyll
+        run: touch .vitepress/dist/.nojekyll
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./.vitepress/dist
 
       - name: Deploy to GitHub Pages
         id: deployment

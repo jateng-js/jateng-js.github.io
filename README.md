@@ -4,7 +4,7 @@ Jateng JS is a Central Java community site for JavaScript developers, inspired b
 
 ## Tech Stack
 
-- [Astro](https://astro.build/)
+- [VitePress](https://vitepress.dev/)
 - [Bun](https://bun.sh/)
 - [Fontsource VT323](https://fontsource.org/fonts/vt323)
 
@@ -41,8 +41,8 @@ The site is deployed to GitHub Pages through GitHub Actions.
 On every push to `main`, the workflow:
 
 - Installs dependencies with Bun
-- Builds the Astro site into `dist`
-- Publishes `dist` to the `gh-pages` branch
+- Builds the VitePress site into `.vitepress/dist`
+- Uploads the generated site as a GitHub Pages artifact
 - Keeps the custom domain configured as `jateng.js.org`
 
 The custom domain is defined in:
@@ -51,4 +51,4 @@ The custom domain is defined in:
 public/CNAME
 ```
 
-GitHub Pages should be configured to serve from the `gh-pages` branch.
+GitHub Pages should be configured to deploy with GitHub Actions.
