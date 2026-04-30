@@ -1,5 +1,10 @@
 import DefaultTheme from "vitepress/theme";
-import "@fontsource/vt323";
 import "./custom.css";
+import JatengLanding from "./landing/Layout.vue";
 
-export default DefaultTheme;
+export default {
+  extends: DefaultTheme,
+  enhanceApp({ app }) {
+    app.component("JatengLanding", JatengLanding);
+  }
+};

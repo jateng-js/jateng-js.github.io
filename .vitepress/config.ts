@@ -8,6 +8,14 @@ export default defineConfig({
   srcExclude: ["README.md"],
   head: [
     ["meta", { name: "theme-color", content: "#101014" }],
+    ["link", { rel: "preconnect", href: "https://api.fontshare.com" }],
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "https://api.fontshare.com/v2/css?f[]=zodiak@400,700&display=swap"
+      }
+    ],
     [
       "meta",
       {

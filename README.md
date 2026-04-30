@@ -6,7 +6,7 @@ Jateng JS is a Central Java community site for JavaScript developers, inspired b
 
 - [VitePress](https://vitepress.dev/)
 - [Bun](https://bun.sh/)
-- [Fontsource VT323](https://fontsource.org/fonts/vt323)
+- [Zodiak](https://www.fontshare.com/fonts/zodiak) from Fontshare
 
 ## Development
 
