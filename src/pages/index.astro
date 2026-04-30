@@ -1,0 +1,629 @@
+---
+import "@fontsource/vt323";
+
+const communities = ["SurabayaJS", "JogjaJS", "BandungJS", "JakartaJS"];
+const focusAreas = [
+  {
+    title: "Meetups",
+    copy: "Regular talks, demos, and hallway conversations for frontend, backend, tooling, and product engineering."
+  },
+  {
+    title: "Learning circles",
+    copy: "Small groups for beginners and experienced developers to study JavaScript, TypeScript, Node.js, Vue, React, Astro, and more."
+  },
+  {
+    title: "Project nights",
+    copy: "Open sessions to ship community projects, help local organizations, and practice working in public."
+  }
+];
+const cities = ["Semarang", "Solo", "Magelang", "Purwokerto", "Pekalongan", "Tegal", "Kudus"];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Jateng JS is a Central Java community for JavaScript developers, inspired by city communities like SurabayaJS and JogjaJS."
+    />
+    <title>Jateng JS - Central Java JavaScript Community</title>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero" aria-labelledby="hero-title">
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="brand" href="/" aria-label="Jateng JS home">
+            <span class="brand-mark">JS</span>
+            <span>Jateng JS</span>
+          </a>
+          <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#programs">Programs</a>
+            <a href="#join">Join</a>
+          </div>
+        </nav>
+
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Central Java JavaScript Community</p>
+            <h1 id="hero-title">Jateng JS</h1>
+            <p class="lead">
+              A home for JavaScript developers across Central Java to meet,
+              learn, share work, and build stronger local tech circles.
+            </p>
+            <div class="hero-actions" aria-label="Community actions">
+              <a class="button primary" href="#join">Join the community</a>
+              <a class="button secondary" href="#programs">See what we do</a>
+            </div>
+          </div>
+
+          <div class="visual-panel" aria-label="Central Java community map">
+            <div class="map-card">
+              <div class="province-shape" aria-hidden="true">
+                <span class="node semarang"></span>
+                <span class="node solo"></span>
+                <span class="node magelang"></span>
+                <span class="node purwokerto"></span>
+                <span class="route route-one"></span>
+                <span class="route route-two"></span>
+                <span class="route route-three"></span>
+              </div>
+              <div class="code-strip" aria-hidden="true">
+                <span>const community = "jateng-js";</span>
+                <span>meetup.on("share", buildTogether);</span>
+                <span>export &#123; semarang, solo, purwokerto &#125;;</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro" id="about" aria-labelledby="about-title">
+        <div>
+          <p class="section-kicker">Why Jateng JS</p>
+          <h2 id="about-title">For developers who want a local JavaScript room.</h2>
+        </div>
+        <p>
+          Indonesia already has strong city-based JavaScript communities like
+          {communities.slice(0, 2).join(" and ")}. Jateng JS brings that same
+          spirit to Central Java: practical talks, friendly mentoring, and a
+          place where students, professionals, founders, and hobbyists can grow
+          together.
+        </p>
+      </section>
+
+      <section class="programs" id="programs" aria-labelledby="programs-title">
+        <div class="section-heading">
+          <p class="section-kicker">What happens here</p>
+          <h2 id="programs-title">A community built around doing the work.</h2>
+        </div>
+        <div class="program-grid">
+          {focusAreas.map((item) => (
+            <article class="program-card">
+              <h3>{item.title}</h3>
+              <p>{item.copy}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="cities" aria-labelledby="cities-title">
+        <div class="section-heading">
+          <p class="section-kicker">Across Central Java</p>
+          <h2 id="cities-title">From campus spaces to coworking rooms.</h2>
+        </div>
+        <div class="city-list" aria-label="Central Java cities">
+          {cities.map((city) => <span>{city}</span>)}
+        </div>
+      </section>
+
+      <section class="join" id="join" aria-labelledby="join-title">
+        <div>
+          <p class="section-kicker">Open to everyone</p>
+          <h2 id="join-title">Bring a question, a talk idea, or a project.</h2>
+        </div>
+        <div class="join-copy">
+          <p>
+            Jateng JS welcomes people who write JavaScript for browsers,
+            servers, tools, apps, and creative experiments. You do not need a
+            senior title to join. Curiosity and respect are enough.
+          </p>
+          <a class="button primary dark" href="mailto:hello@jateng.js.org">hello@jateng.js.org</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
+<style>
+  :root {
+    color-scheme: light;
+    --ink: #171717;
+    --muted: #5f646d;
+    --paper: #f7f6f1;
+    --panel: #ffffff;
+    --line: #dedbd2;
+    --yellow: #f6d84a;
+    --green: #1f7a4d;
+    --teal: #0d8b8f;
+    --red: #d84b3a;
+    --charcoal: #252525;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family:
+      Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", sans-serif;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .page-shell {
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  .hero {
+    min-height: 92vh;
+    padding: 24px clamp(20px, 5vw, 72px) 56px;
+    background:
+      linear-gradient(120deg, rgba(246, 216, 74, 0.2), transparent 34%),
+      linear-gradient(180deg, #fffdf4 0%, #f7f6f1 72%);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  .brand,
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+
+  .brand {
+    gap: 10px;
+    font-weight: 800;
+  }
+
+  .brand-mark {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    background: var(--yellow);
+    border: 2px solid var(--ink);
+    font-weight: 900;
+  }
+
+  .nav-links {
+    gap: clamp(14px, 3vw, 30px);
+    color: var(--muted);
+    font-size: 0.95rem;
+    font-weight: 650;
+  }
+
+  .nav-links a:hover {
+    color: var(--ink);
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.96fr) minmax(320px, 1.04fr);
+    gap: clamp(36px, 6vw, 86px);
+    align-items: center;
+    max-width: 1180px;
+    min-height: calc(92vh - 74px);
+    margin: 0 auto;
+    padding-top: 42px;
+  }
+
+  .eyebrow,
+  .section-kicker {
+    margin: 0 0 14px;
+    color: var(--green);
+    font-size: 0.78rem;
+    font-weight: 850;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    margin-top: 0;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "VT323", ui-monospace, "SFMono-Regular", Consolas, monospace;
+    font-weight: 400;
+  }
+
+  h1 {
+    max-width: 12ch;
+    margin-bottom: 18px;
+    font-size: clamp(5.25rem, 18vw, 12.5rem);
+    line-height: 0.78;
+    letter-spacing: 0;
+  }
+
+  h2 {
+    max-width: 720px;
+    margin-bottom: 0;
+    font-size: clamp(2.8rem, 6vw, 5.75rem);
+    line-height: 0.88;
+    letter-spacing: 0;
+  }
+
+  h3 {
+    margin-bottom: 14px;
+    font-size: 2rem;
+    line-height: 0.95;
+  }
+
+  .lead {
+    max-width: 620px;
+    color: #30343a;
+    font-size: clamp(1.18rem, 2.4vw, 1.6rem);
+    line-height: 1.45;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 34px;
+  }
+
+  .button {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    border: 2px solid var(--ink);
+    border-radius: 6px;
+    font-weight: 800;
+    line-height: 1;
+    box-shadow: 4px 4px 0 var(--ink);
+    transition:
+      transform 160ms ease,
+      box-shadow 160ms ease;
+  }
+
+  .button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--ink);
+  }
+
+  .button.primary {
+    background: var(--yellow);
+  }
+
+  .button.secondary {
+    background: var(--panel);
+  }
+
+  .button.dark {
+    background: var(--charcoal);
+    color: white;
+  }
+
+  .visual-panel {
+    min-width: 0;
+  }
+
+  .map-card {
+    position: relative;
+    min-height: 560px;
+    overflow: hidden;
+    border: 2px solid var(--ink);
+    border-radius: 8px;
+    background:
+      radial-gradient(circle at 18% 22%, rgba(13, 139, 143, 0.18), transparent 24%),
+      radial-gradient(circle at 80% 74%, rgba(216, 75, 58, 0.16), transparent 28%),
+      #faf8ee;
+    box-shadow: 12px 12px 0 var(--ink);
+  }
+
+  .province-shape {
+    position: absolute;
+    inset: 12% 7% 28%;
+    border: 2px solid #252525;
+    border-radius: 54% 46% 48% 52% / 38% 44% 56% 62%;
+    background:
+      linear-gradient(135deg, rgba(246, 216, 74, 0.5), transparent 46%),
+      linear-gradient(45deg, rgba(31, 122, 77, 0.18), rgba(13, 139, 143, 0.2));
+    transform: rotate(-4deg);
+  }
+
+  .province-shape::before,
+  .province-shape::after {
+    position: absolute;
+    content: "";
+    border: 2px solid var(--ink);
+    background: #faf8ee;
+  }
+
+  .province-shape::before {
+    right: -9%;
+    bottom: 17%;
+    width: 26%;
+    height: 28%;
+    border-radius: 45% 55% 50% 50%;
+  }
+
+  .province-shape::after {
+    left: 7%;
+    bottom: -12%;
+    width: 20%;
+    height: 24%;
+    border-radius: 48%;
+  }
+
+  .node,
+  .route {
+    position: absolute;
+    display: block;
+  }
+
+  .node {
+    z-index: 2;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--ink);
+    border-radius: 50%;
+    background: var(--yellow);
+    box-shadow: 0 0 0 7px rgba(246, 216, 74, 0.28);
+  }
+
+  .semarang {
+    top: 30%;
+    left: 48%;
+  }
+
+  .solo {
+    right: 24%;
+    bottom: 26%;
+    background: var(--red);
+  }
+
+  .magelang {
+    left: 42%;
+    bottom: 34%;
+    background: var(--teal);
+  }
+
+  .purwokerto {
+    left: 20%;
+    bottom: 33%;
+    background: var(--green);
+  }
+
+  .route {
+    height: 3px;
+    background: var(--ink);
+    transform-origin: left center;
+    opacity: 0.85;
+  }
+
+  .route-one {
+    top: 36%;
+    left: 50%;
+    width: 26%;
+    transform: rotate(31deg);
+  }
+
+  .route-two {
+    bottom: 39%;
+    left: 22%;
+    width: 24%;
+    transform: rotate(-3deg);
+  }
+
+  .route-three {
+    bottom: 37%;
+    left: 44%;
+    width: 24%;
+    transform: rotate(-23deg);
+  }
+
+  .code-strip {
+    position: absolute;
+    right: 22px;
+    bottom: 22px;
+    left: 22px;
+    display: grid;
+    gap: 8px;
+    padding: 18px;
+    border: 2px solid var(--ink);
+    border-radius: 6px;
+    background: #252525;
+    color: #fbf7df;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    font-size: clamp(0.75rem, 1.8vw, 0.95rem);
+    line-height: 1.55;
+  }
+
+  .intro,
+  .programs,
+  .cities,
+  .join {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: clamp(58px, 9vw, 108px) clamp(20px, 5vw, 72px);
+  }
+
+  .intro,
+  .join {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: clamp(28px, 6vw, 72px);
+    align-items: start;
+  }
+
+  .intro > p,
+  .join-copy p {
+    color: #30343a;
+    font-size: clamp(1.08rem, 2vw, 1.34rem);
+    line-height: 1.65;
+  }
+
+  .section-heading {
+    margin-bottom: 34px;
+  }
+
+  .program-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .program-card {
+    min-height: 250px;
+    padding: 26px;
+    border: 2px solid var(--ink);
+    border-radius: 8px;
+    background: var(--panel);
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+
+  .program-card:nth-child(2) {
+    background: #ecfaf8;
+  }
+
+  .program-card:nth-child(3) {
+    background: #fff1ed;
+  }
+
+  .program-card p {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.62;
+  }
+
+  .cities {
+    padding-top: 22px;
+  }
+
+  .city-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .city-list span {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    padding: 0 16px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #ffffff;
+    color: #30343a;
+    font-weight: 750;
+  }
+
+  .join {
+    margin-bottom: 56px;
+    border: 2px solid var(--ink);
+    border-radius: 8px;
+    background: var(--yellow);
+    box-shadow: 10px 10px 0 var(--ink);
+  }
+
+  .join-copy {
+    display: grid;
+    gap: 20px;
+    justify-items: start;
+  }
+
+  @media (max-width: 880px) {
+    .hero {
+      min-height: auto;
+    }
+
+    .hero-grid,
+    .intro,
+    .join {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-grid {
+      min-height: auto;
+    }
+
+    .visual-panel {
+      order: -1;
+    }
+
+    .map-card {
+      min-height: 430px;
+      box-shadow: 8px 8px 0 var(--ink);
+    }
+
+    .program-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .nav {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .nav-links {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    h1 {
+      font-size: clamp(4.8rem, 26vw, 8rem);
+    }
+
+    .hero-actions,
+    .button {
+      width: 100%;
+    }
+
+    .map-card {
+      min-height: 360px;
+    }
+
+    .province-shape {
+      inset: 12% 5% 36%;
+    }
+
+    .code-strip {
+      right: 14px;
+      bottom: 14px;
+      left: 14px;
+    }
+  }
+</style>
